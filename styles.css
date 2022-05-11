@@ -1,17 +1,26 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Overpass:wght@400;700&family=Playfair+Display:wght@600&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
+    font-family: "kumbh Sans";
+    font-weight: 400;
     min-height: 100vh;
-    background-image: linear-gradient(to bottom,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.main{
+h1{
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.main {
     height: 510px;
     width: 920px;
     display: grid;
@@ -20,7 +29,8 @@ body{
     background-color: white;
     border-radius: 25px;
 }
-.rightsection{
+
+.rightsection {
     background-image: url(images/bg-pattern-desktop.svg);
     background-size: 220%;
     background-repeat: no-repeat;
@@ -30,43 +40,100 @@ body{
     position: relative;
     /* overflow: hidden; */
 }
-.rightsection .firstcontent{
+
+.rightsection .firstcontent {
     overflow: hidden;
 }
-.rightsection .rightupper-image{
+
+.rightsection .rightupper-image {
     position: absolute;
     left: -95px;
     top: 40%;
 }
-.rightsection .firstcontent picture img{
+
+.rightsection .firstcontent picture img {
     width: 410px;
     margin-left: -80px;
 }
-@media (max-width: 600px){
-    .main{
+
+.leftsection {
+    padding: 50px 30px 50px 10px;
+}
+.ques{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
+.ans{
+    font-size: 12px;
+    width: 80%;
+    display: none;
+}
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 1px;
+    border-width: 0;
+    background-color: hsl(240, 5%, 91%);
+    width: 90%;
+}
+@media (max-width: 600px) {
+    .main {
         height: 510px;
         width: 300px;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
+        grid-template-rows: 20% 80%;
         background-color: white;
         border-radius: 25px;
     }
-    .rightsection .rightupper-image{
+
+    .rightsection .rightupper-image {
         display: none;
     }
-    .rightsection{
+
+    .rightsection {
         display: inline-block;
         background-image: url(images/bg-pattern-mobile.svg);
         background-size: 75%;
         /* background-repeat: no-repeat; */
-        background-position: 45% 10%;
+        background-position: 50% 10%;
+        /*background-image: visible;*/
     }
-    .rightsection .firstcontent picture img{
+
+    .rightsection .firstcontent picture img {
         width: 230px;
         position: absolute;
         top: -105px;
         left: 120px;
         /* margin-left: -80px; */
+    }
+    .leftsection{
+        padding: 20px;
+    }
+    h1{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .ques{
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+    .ans{
+        font-size: 10px;
+        width: 80%;
+        display: none;
+    }
+    hr{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 1px;
+        border-width: 0;
+        background-color: hsl(240, 5%, 91%);
+        width: 90%;
     }
 }
